@@ -17,7 +17,7 @@ pipeline{
     }
     post{
         always{
-          sh "rm -rf ./*"
+          echo "dsadsadas"
         }
         success{
             echo "========pipeline executed successfully ========"
