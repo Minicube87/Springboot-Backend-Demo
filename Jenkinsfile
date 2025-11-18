@@ -1,17 +1,23 @@
 pipeline{
-    agent{
-        label any
+
+    agent label any
+
+
+    tools{
+        maven 'Maven'
     }
+
     stages{
-        stage("A"){
+        stage("Cleanup"){
             steps{
-                echo "========executing A========"
+              sh "mvn --version"  
+              sh "mvn clean"
             }
         }
     }
     post{
         always{
-            echo "========always========"
+          sh "rm -rf ./*"
         }
         success{
             echo "========pipeline executed successfully ========"
