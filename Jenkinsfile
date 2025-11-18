@@ -17,7 +17,7 @@ pipeline{
     }
     post{
         always{
-          echo "dsadsadas"
+          echo "sssss"
         }
         success{
             echo "========pipeline executed successfully ========"
